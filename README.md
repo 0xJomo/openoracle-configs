@@ -10,7 +10,7 @@ make generate-keys
 ```
 Run the command to generate bls and ecdsa keys for your operator
 
-## Running command
+## Configure docker file
 Update command docker-compose.yml to include operator address and path to your bls and ecdsa key 
 
 ```
