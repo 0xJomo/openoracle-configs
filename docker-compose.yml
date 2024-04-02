@@ -7,6 +7,6 @@ services:
     volumes:
       - ./:/open-oracle/
     working_dir: /open-oracle
-    command: --config config-files/operator-docker-compose.anvil.yaml --operator-address 0x860B6912C2d0337ef05bbC89b0C2CB6CbAEAB4A5 --bls-private-key keys/test.bls.key.json --ecdsa-private-key keys/test.ecdsa.key.json
+    command: --config config-files/operator-docker-compose.yaml --operator-address 0x860B6912C2d0337ef05bbC89b0C2CB6CbAEAB4A5 --bls-private-key keys/bls_key_pair.json --ecdsa-private-key keys/ecdsa_key.json
 
 
