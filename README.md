@@ -1,4 +1,5 @@
 # openoracle-configs
+
 ## Dependencies
 Download and install docker per guide https://docs.docker.com/get-docker/
 
