@@ -3,11 +3,13 @@
 ## Dependencies
 Download and install docker per guide https://docs.docker.com/get-docker/
 
+## Clone the repo
+```
+git clone https://github.com/0xJomo/openoracle-configs.git
+cd openoracle-configs
+```
+
 ## Generating bls and ecdsa keys
-
-You can set up the keys with your own password following this guide: https://docs.eigenlayer.xyz/eigenlayer/operator-guides/operator-installation#create-keys
-
-Alertnatively, you can just run the command to generate bls and ecdsa keys for your operator
 
 ```
 make generate-keys
@@ -19,12 +21,14 @@ ECDSA keys are located under ./keys/ecdsa_key.
 
 You can remove the passwords files and protect the generated passwords accordingly.
 
+Alternatively, you can set up the keys with your own password following this guide: https://docs.eigenlayer.xyz/eigenlayer/operator-guides/operator-installation#create-keys
+
 
 ## Configure docker file
-Update command docker-compose.yml to include operator address and path to your bls and ecdsa key 
+Update file `docker-compose.yml` to include operator address and path to your bls and ecdsa key 
 
 ```
---config config-files/operator-docker-compose.yaml --operator-address [Update with generated keys/ecdsa_key/private_key_hex] --bls-private-key keys/bls_key/keys/1.bls.key.json --ecdsa-private-key keys/ecdsa_key/keys/1.ecdsa.key.json
+--config config-files/operator-docker-compose.yaml --operator-address [Update with generated keys/ecdsa_key/keys/1.ecdsa.key.json - find `address`] --bls-private-key keys/bls_key/keys/1.bls.key.json --ecdsa-private-key keys/ecdsa_key/keys/1.ecdsa.key.json
 ```
 
 Update your bls and ecdsa key password 
