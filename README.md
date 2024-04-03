@@ -13,6 +13,12 @@ Alertnatively, you can just run the command to generate bls and ecdsa keys for y
 make generate-keys
 ```
 
+BLS keys are located under ./keys/bls_key.
+
+ECDSA keys are located under ./keys/ecdsa_key.
+
+You can remove the passwords files and protect the generated passwords accordingly.
+
 
 ## Configure docker file
 Update command docker-compose.yml to include operator address and path to your bls and ecdsa key 
