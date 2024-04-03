@@ -7,6 +7,9 @@ services:
     volumes:
       - ./:/open-oracle/
     working_dir: /open-oracle
-    command: --config config-files/operator-docker-compose.yaml --operator-address 0x860B6912C2d0337ef05bbC89b0C2CB6CbAEAB4A5 --bls-private-key keys/bls_key/keys/1.bls.key.json --ecdsa-private-key keys/ecdsa_key/keys/1.ecdsa.key.json
+    environment:
+      OPERATOR_BLS_KEY_PASSWORD: "13Uq9nUOIcvyn34tyMJg"
+      OPERATOR_ECDSA_KEY_PASSWORD: "QTWHMYyHyBKnb36WZuQt"
+    command: --config config-files/operator-docker-compose.yaml --operator-address 0xa519e5306b75881e3ee471ee2c739c325a41a37a --bls-private-key keys/bls_key/keys/1.bls.key.json --ecdsa-private-key keys/ecdsa_key/keys/1.ecdsa.key.json
 
 
