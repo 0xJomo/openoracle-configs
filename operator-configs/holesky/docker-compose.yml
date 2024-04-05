@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  operator:
+    image: gcr.io/openoracle-de73b/operator:latest
+    volumes:
+      - ../../:/open-oracle/
+    working_dir: /open-oracle
+    environment:
+      OPERATOR_BLS_KEY_PASSWORD: "ez6Nj31MqhZEkeWvQpLI"
+      OPERATOR_ECDSA_KEY_PASSWORD: "RkBC3IrMVJaK6xiEWBvC"
+    command: --config ./static-configs/holesky/operator-docker-compose.yaml --operator-address 0x13797657aceeb0431c8556e06386c641e056b8c9 --bls-private-key keys/bls_key/keys/1.bls.key.json --ecdsa-private-key keys/ecdsa_key/keys/1.ecdsa.key.json
