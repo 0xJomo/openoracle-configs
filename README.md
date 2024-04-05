@@ -25,10 +25,10 @@ Alternatively, you can set up the keys with your own password following this gui
 
 
 ## Configure docker file
-Update file `operator-configs/<NETWORK>/docker-compose.yml` to include operator address and path to your bls and ecdsa key 
+Update file `operator-configs/[NETWORK]/docker-compose.yml` to include operator address and path to your bls and ecdsa key 
 
 ```
---config ./static-configs/<NETWORK>/operator-docker-compose.yaml --operator-address [Update with generated keys/ecdsa_key/keys/1.ecdsa.key.json - find `address`] --bls-private-key keys/bls_key/keys/1.bls.key.json --ecdsa-private-key keys/ecdsa_key/keys/1.ecdsa.key.json
+--config ./static-configs/[NETWORK]/operator-docker-compose.yaml --operator-address [Update with generated keys/ecdsa_key/keys/1.ecdsa.key.json - find `address`] --bls-private-key keys/bls_key/keys/1.bls.key.json --ecdsa-private-key keys/ecdsa_key/keys/1.ecdsa.key.json
 ```
 
 Update your bls and ecdsa key password 
@@ -50,4 +50,9 @@ Step 2: Send at least 0.1 Holesky ETH to the operator address. This ETH will be 
 
 
 ## Starting opeartor via make
-make docker-start-<NETWORK>
+make docker-start-[NETWORK]
+
+Example
+```
+make docker-start-holesky
+```
