@@ -5,8 +5,8 @@ production: false
 
 # This is the address of the slasher which is deployed in the anvil saved state
 # The saved eigenlayer state is located in tests/anvil/eigenlayer-deployed-anvil-state.json
-avs_registry_coordinator_address: 0x4c6Aa3Dd84d6200c16A278692AD551F9d29a41d4
-operator_state_retriever_address: 0x68D8f03697a8CBd40b8C4630803Cc23aDE7A9468
+avs_registry_coordinator_address: 0xE0315CCaF46A736BFAB173670CBcC97bE65Eb414
+operator_state_retriever_address: 0x12ddeDbB47340e6702529197cB593204A4aFa318
 
 # ETH RPC URL
 eth_rpc_url: https://ethereum-holesky-rpc.publicnode.com
@@ -27,6 +27,3 @@ enable_node_api: true
 # the registered operator, it's blspubkey registering event with the compendium is not present anymore,
 # and so the aggregator can't find it.... very annoying
 register_operator_on_startup: true
-# address of token to deposit tokens into when registering on startup
-# addresses.erc20MockStrategy in tests/anvil/credible_squaring_avs_deployment_output.json
-token_strategy_addr: 0xa85233C63b9Ee964Add6F2cffe00Fd84eb32338f
