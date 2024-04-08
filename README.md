@@ -1,4 +1,19 @@
 # openoracle-configs
+This repository is used by Node Operators to config and start operating for OpenOracle.
+More details about OpenOracle can be found here: https://openlayer.gitbook.io/openlayer/openoracle
+
+## Hardware Requirements
+We recommend the following hardware for participating in our Holesky Testnet.
+```
+Operating System: linux amd x64
+vCPUs: 2 Memory: 4GiB
+Storage: 100GB
+EC2 Equivalent: m5.medium
+Required download bandwidth usage: 1 Mbps
+Required upload bandwidth usage: 1 Mbps
+Recommended download bandwidth usage: 8 Mbps
+Recommended upload bandwidth usage: 8 Mbps
+```
 
 ## Dependencies
 Download and install docker per guide https://docs.docker.com/get-docker/
