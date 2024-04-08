@@ -56,3 +56,16 @@ Example
 ```
 make docker-start-holesky
 ```
+
+## Upgrading opeartor
+Step 1: Stop the operator
+
+Step 2: Pull latest repository
+```
+git pull
+```
+
+Step 3: Restart operator
+```
+make docker-start-holesky
+```
