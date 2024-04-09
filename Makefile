@@ -8,6 +8,6 @@ help:
 docker-start-everything: ## starts aggregator and operator docker containers
 	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose up
 generate-keys: ## generates bls and ecdsa keys
-	./keys/egnkey generate --key-type bls --num-keys 1 --output-dir keys/bls_key
-	./keys/egnkey generate --key-type ecdsa --num-keys 1 --output-dir keys/ecdsa_key
+	./keys/egnkey-linux generate --key-type bls --num-keys 1 --output-dir keys/bls_key
+	./keys/egnkey-linux generate --key-type ecdsa --num-keys 1 --output-dir keys/ecdsa_key
 
