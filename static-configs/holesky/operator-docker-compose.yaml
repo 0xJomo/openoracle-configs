@@ -13,7 +13,7 @@ eth_rpc_url: https://ethereum-holesky-rpc.publicnode.com
 eth_ws_url: wss://holesky.drpc.org
 
 # address which the aggregator listens on for operator signed messages
-aggregator_server_ip_port_address: open-oracle-aggregator:8090
+aggregator_server_ip_port_address: https://us-central1-openoracle-de73b.cloudfunctions.net/backend_apis/api/report_result
 
 # avs node spec compliance https://eigen.nethermind.io/docs/spec/intro
 eigen_metrics_ip_port_address: 0.0.0.0:9090
