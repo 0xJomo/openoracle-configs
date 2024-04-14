@@ -8,10 +8,6 @@ production: false
 avs_registry_coordinator_address: 0xc3e53F4d16Ae77Db1c982e75a937B9f60FE63690
 operator_state_retriever_address: 0x1613beB3B2C4f22Ee086B2b38C1476A3cE7f78E8
 
-# ETH RPC URL
-eth_rpc_url: http://host.docker.internal:8545
-eth_ws_url: ws://host.docker.internal:8545
-
 # address which the aggregator listens on for operator signed messages
 aggregator_server_ip_port_address: open-oracle-aggregator:8090
 chain_name: eth
