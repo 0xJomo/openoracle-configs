@@ -26,7 +26,11 @@ cd openoracle-configs
 
 ## Generating keys
 
-### 1. Generate BLS key
+### 1. Import or generate BLS key
+If you already generated a bls key pair during a previous setup with OpenOracle, import it to the same location, or anywhere in the project.
+
+Alternatively, if you are setting up with OpenOracle the first time, we recommend you to generate a new bls key pair specifically for OpenOracle operation.
+
 ```
 make generate-bls-key
 ```
