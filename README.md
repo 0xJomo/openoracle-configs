@@ -51,6 +51,9 @@ Generated ECDSA keys are located under ./keys/ecdsa_key.
 ## Configure ENV
 Update file `operator-configs/[NETWORK]/.env` and fill in the ENV variables
 
+### 0. Copy from Example ENV file
+`cp operator-configs/holesky/.env.example operator-configs/holesky/.env`
+
 ### 1. OPERATOR_ADDRESS
 Make sure this matches your ECDSA key.
 
