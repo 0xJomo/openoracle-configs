@@ -40,4 +40,4 @@ holesky-update-operator: ## updates operator stake with OpenOracle (Holesky)
 	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/holesky/update-operator.yml up
 
 start-monitoring: ## start prometheus and grafana monitoring for operators
-	docker compose -f monitoring/start-monitoring.yml up
+	docker compose -f monitoring/start-monitoring.yml up -d
