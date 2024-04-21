@@ -13,7 +13,7 @@ aggregator_server_ip_port_address: https://us-central1-openoracle-de73b.cloudfun
 chain_name: eth
 
 # avs node spec compliance https://eigen.nethermind.io/docs/spec/intro
-eigen_metrics_ip_port_address: 0.0.0.0:9090
+eigen_metrics_ip_port_address: 0.0.0.0:9091
 enable_metrics: true
 node_api_ip_port_address: 0.0.0.0:9010
 enable_node_api: true

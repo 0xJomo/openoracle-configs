@@ -127,6 +127,23 @@ make holesky-start-operator
 make holesky-update-operator
 ```
 
+## Start Monitoring
+### Start monitoring stack
+```
+make start-monitoring
+```
+
+### Connect operator and monitoring network
+```
+docker network connect openoracle-operator prometheus
+```
+
+### Login to Grafana and check metrics
+Go to `http://localhost:3000` and login with username `admin` and password `admin`.
+
+### Check raw metrics at Prometheus
+Go to `http://localhost:9090` and query more raws metrics.
+
 ## All available commands
 ```
 make help
