@@ -90,6 +90,8 @@ make holesky-register-operator-el
 ```
 
 ### 2. Register operator with OpenOracle (If first time operating for OpenOracle)
+`NOTE: Please reach out to the team first, so we can add your operator address to the whitelist`
+
 ```
 make holesky-register-operator-avs
 ```
@@ -164,4 +166,5 @@ holesky-stop-operator-all      stops operator - to be used when started using ho
 holesky-register-operator-el   registers operator with eigenlayer (Holesky)
 holesky-register-operator-avs  registers operator with OpenOracle (Holesky)
 holesky-update-operator        updates operator stake with OpenOracle (Holesky)
+monitoring                     start prometheus and grafana monitoring stack
 ```
