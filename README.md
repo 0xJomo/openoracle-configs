@@ -166,5 +166,5 @@ holesky-stop-operator-all      stops operator - to be used when started using ho
 holesky-register-operator-el   registers operator with eigenlayer (Holesky)
 holesky-register-operator-avs  registers operator with OpenOracle (Holesky)
 holesky-update-operator        updates operator stake with OpenOracle (Holesky)
-monitoring                     start prometheus and grafana monitoring stack
+start-monitoring                     start prometheus and grafana monitoring stack
 ```
