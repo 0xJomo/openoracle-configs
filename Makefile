@@ -41,3 +41,38 @@ holesky-update-operator: ## updates operator stake with OpenOracle (Holesky)
 
 start-monitoring: ## start prometheus and grafana monitoring for operators
 	docker compose -f monitoring/start-monitoring.yml up -d
+
+# Mainnet commands
+
+generate-bls-key-mainnet: ## generates bls key (Mainnet)
+	./keys/egnkey-linux generate --key-type bls --num-keys 1 --output-dir keys/mainnet/bls_key
+
+generate-ecdsa-key-mainnet: ## generates ecdsa key (Mainnet)
+	./keys/egnkey-linux generate --key-type ecdsa --num-keys 1 --output-dir keys/mainnet/ecdsa_key
+
+generate-bls-key-arm-mainnet: ## generates bls key on arm machines (Mainnet)
+	./keys/egnkey generate --key-type bls --num-keys 1 --output-dir keys/mainnet/bls_key
+
+generate-ecdsa-key-arm-mainnet: ## generates ecdsa key on arm machines (Mainnet)
+	./keys/egnkey generate --key-type ecdsa --num-keys 1 --output-dir keys/mainnet/ecdsa_key
+
+mainnet-start-operator: ## starts running the operator (Mainnet)
+	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/mainnet/start-operator.yml up -d
+
+mainnet-stop-operator: ## stops operator (Mainnet)
+	docker compose -f operator-configs/mainnet/start-operator.yml down
+
+mainnet-start-operator-all: ## registers and starts running the operator (Mainnet)
+	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/mainnet/start-operator-all.yml up -d
+
+mainnet-stop-operator-all: ## stops operator - to be used when started using mainnet-start-operator-all (Mainnet)
+	docker compose -f operator-configs/mainnet/start-operator-all.yml down
+
+mainnet-register-operator-el: ## registers operator with eigenlayer (Mainnet)
+	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/mainnet/register-operator-el.yml up
+
+mainnet-register-operator-avs: ## registers operator with OpenOracle (Mainnet)
+	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/mainnet/register-operator-avs.yml up
+
+mainnet-update-operator: ## updates operator stake with OpenOracle (Mainnet)
+	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/mainnet/update-operator.yml up
