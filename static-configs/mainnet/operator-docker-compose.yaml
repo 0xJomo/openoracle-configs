@@ -10,6 +10,7 @@ operator_state_retriever_address: 0x8b57BC00cF01841a78b09Fabe3C2D49A1303A060
 
 # address which the aggregator listens on for operator signed messages
 aggregator_server_ip_port_address: https://us-central1-openoracle-de73b.cloudfunctions.net/backend_apis/api/report_result
+price_config_server_ip_port_address: https://us-central1-openoracle-de73b.cloudfunctions.net/backend_apis/api/price_feed_config
 chain_name: ethmainnet
 
 # avs node spec compliance https://eigen.nethermind.io/docs/spec/intro

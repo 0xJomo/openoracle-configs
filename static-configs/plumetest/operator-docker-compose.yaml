@@ -10,6 +10,7 @@ operator_state_retriever_address: 0xe09f64705F8D2b695fdA57221a18001787F57eaE
 
 # address which the aggregator listens on for operator signed messages
 aggregator_server_ip_port_address: https://us-central1-openoracle-de73b.cloudfunctions.net/backend_apis/api/report_result
+price_config_server_ip_port_address: https://us-central1-openoracle-de73b.cloudfunctions.net/backend_apis/api/price_feed_config
 chain_name: plumetest
 
 # avs node spec compliance https://eigen.nethermind.io/docs/spec/intro
