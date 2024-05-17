@@ -42,6 +42,29 @@ holesky-update-operator: ## updates operator stake with OpenOracle (Holesky)
 start-monitoring: ## start prometheus and grafana monitoring for operators
 	docker compose -f monitoring/start-monitoring.yml up -d
 
+# Plumetest commands
+
+plumetest-start-operator: ## starts running the operator (Plumetest)
+	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/plumetest/start-operator.yml up -d
+
+plumetest-stop-operator: ## stops operator (Plumetest)
+	docker compose -f operator-configs/plumetest/start-operator.yml down
+
+plumetest-start-operator-all: ## registers and starts running the operator (Plumetest)
+	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/plumetest/start-operator-all.yml up -d
+
+plumetest-stop-operator-all: ## stops operator - to be used when started using plumetest-start-operator-all (Plumetest)
+	docker compose -f operator-configs/plumetest/start-operator-all.yml down
+
+plumetest-register-operator-el: ## registers operator with eigenlayer (Plumetest)
+	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/plumetest/register-operator-el.yml up
+
+plumetest-register-operator-avs: ## registers operator with OpenOracle (Plumetest)
+	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/plumetest/register-operator-avs.yml up
+
+plumetest-update-operator: ## updates operator stake with OpenOracle (Plumetest)
+	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/plumetest/update-operator.yml up
+
 # Mainnet commands
 
 generate-bls-key-mainnet: ## generates bls key (Mainnet)
