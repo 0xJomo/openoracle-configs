@@ -10,11 +10,17 @@ generate-bls-key: ## generates bls key
 generate-ecdsa-key: ## generates ecdsa key
 	./keys/egnkey-linux generate --key-type ecdsa --num-keys 1 --output-dir keys/ecdsa_key
 
+generate-signer-ecdsa-key: ## generates signer ecdsa key
+	./keys/egnkey-linux generate --key-type ecdsa --num-keys 1 --output-dir keys/signer_ecdsa_key
+
 generate-bls-key-arm: ## generates bls key on arm machines
 	./keys/egnkey generate --key-type bls --num-keys 1 --output-dir keys/bls_key
 
 generate-ecdsa-key-arm: ## generates ecdsa key on arm machines
 	./keys/egnkey generate --key-type ecdsa --num-keys 1 --output-dir keys/ecdsa_key
+
+generate-signer-ecdsa-key-arm: ## generates signer ecdsa key on arm machines
+	./keys/egnkey generate --key-type ecdsa --num-keys 1 --output-dir keys/signer_ecdsa_key
 
 # Holesky commands
 
@@ -73,11 +79,17 @@ generate-bls-key-mainnet: ## generates bls key (Mainnet)
 generate-ecdsa-key-mainnet: ## generates ecdsa key (Mainnet)
 	./keys/egnkey-linux generate --key-type ecdsa --num-keys 1 --output-dir keys/mainnet/ecdsa_key
 
+generate-signer-ecdsa-key-mainnet: ## generates signer ecdsa key (Mainnet)
+	./keys/egnkey-linux generate --key-type ecdsa --num-keys 1 --output-dir keys/mainnet/signer_ecdsa_key
+
 generate-bls-key-arm-mainnet: ## generates bls key on arm machines (Mainnet)
 	./keys/egnkey generate --key-type bls --num-keys 1 --output-dir keys/mainnet/bls_key
 
 generate-ecdsa-key-arm-mainnet: ## generates ecdsa key on arm machines (Mainnet)
 	./keys/egnkey generate --key-type ecdsa --num-keys 1 --output-dir keys/mainnet/ecdsa_key
+
+generate-signer-ecdsa-key-arm-mainnet: ## generates signer ecdsa key on arm machines (Mainnet)
+	./keys/egnkey generate --key-type ecdsa --num-keys 1 --output-dir keys/mainnet/signer_ecdsa_key
 
 mainnet-start-operator: ## starts running the operator (Mainnet)
 	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/mainnet/start-operator.yml up -d

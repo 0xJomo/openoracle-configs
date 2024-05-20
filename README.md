@@ -211,27 +211,31 @@ make help
 ```
 
 ```
-generate-bls-key               generates bls key
-generate-ecdsa-key             generates ecdsa key
-generate-bls-key-arm           generates bls key on arm machines
-generate-ecdsa-key-arm         generates ecdsa key on arm machines
-holesky-start-operator         starts running the operator (Holesky)
-holesky-stop-operator          stops operator (Holesky)
-holesky-start-operator-all     registers and starts running the operator (Holesky)
-holesky-stop-operator-all      stops operator - to be used when started using holesky-start-operator-all (Holesky)
-holesky-register-operator-el   registers operator with eigenlayer (Holesky)
-holesky-register-operator-avs  registers operator with OpenOracle (Holesky)
-holesky-update-operator        updates operator stake with OpenOracle (Holesky)
-start-monitoring               start prometheus and grafana monitoring stack
-generate-bls-key-mainnet       generates bls key (Mainnet)
-generate-ecdsa-key-mainnet     generates ecdsa key (Mainnet)
-generate-bls-key-arm-mainnet   generates bls key on arm machines (Mainnet)
-generate-ecdsa-key-arm-mainnet generates ecdsa key on arm machines (Mainnet)
-mainnet-start-operator         starts running the operator (Mainnet)
-mainnet-stop-operator          stops operator (Mainnet)
-mainnet-start-operator-all     registers and starts running the operator (Mainnet)
-mainnet-stop-operator-all      stops operator - to be used when started using mainnet-start-operator-all (Mainnet)
-mainnet-register-operator-el   registers operator with eigenlayer (Mainnet)
-mainnet-register-operator-avs  registers operator with OpenOracle (Mainnet)
-mainnet-update-operator        updates operator stake with OpenOracle (Mainnet)
+generate-bls-key                        generates bls key
+generate-ecdsa-key                      generates ecdsa key
+generate-signer-ecdsa-key               generates signer ecdsa key
+generate-bls-key-arm                    generates bls key on arm machines
+generate-ecdsa-key-arm                  generates ecdsa key on arm machines
+generate-signer-ecdsa-key-arm           generates signer ecdsa key on arm machines
+holesky-start-operator                  starts running the operator (Holesky)
+holesky-stop-operator                   stops operator (Holesky)
+holesky-start-operator-all              registers and starts running the operator (Holesky)
+holesky-stop-operator-all               stops operator - to be used when started using holesky-start-operator-all (Holesky)
+holesky-register-operator-el            registers operator with eigenlayer (Holesky)
+holesky-register-operator-avs           registers operator with OpenOracle (Holesky)
+holesky-update-operator                 updates operator stake with OpenOracle (Holesky)
+start-monitoring                        start prometheus and grafana monitoring stack
+generate-bls-key-mainnet                generates bls key (Mainnet)
+generate-ecdsa-key-mainnet              generates ecdsa key (Mainnet)
+generate-signer-ecdsa-key-mainnet       generates signer ecdsa key (Mainnet)
+generate-bls-key-arm-mainnet            generates bls key on arm machines (Mainnet)
+generate-ecdsa-key-arm-mainnet          generates ecdsa key on arm machines (Mainnet)
+generate-signer-ecdsa-key-arm-mainnet   generates signer ecdsa key on arm machines (Mainnet)
+mainnet-start-operator                  starts running the operator (Mainnet)
+mainnet-stop-operator                   stops operator (Mainnet)
+mainnet-start-operator-all              registers and starts running the operator (Mainnet)
+mainnet-stop-operator-all               stops operator - to be used when started using mainnet-start-operator-all (Mainnet)
+mainnet-register-operator-el            registers operator with eigenlayer (Mainnet)
+mainnet-register-operator-avs           registers operator with OpenOracle (Mainnet)
+mainnet-update-operator                 updates operator stake with OpenOracle (Mainnet)
 ```
