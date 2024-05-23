@@ -27,5 +27,5 @@ enable_node_api: true
 register_operator_on_startup: true
 
 chain_urls:
-  holesky: wss://<Your own holesky WSS RPC endpoint>
+  eth: wss://<Your own holesky WSS RPC endpoint>
   plumetest: wss://plume-testnet.rpc.caldera.xyz/infra-partner-ws

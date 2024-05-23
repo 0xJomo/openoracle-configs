@@ -27,4 +27,4 @@ enable_node_api: true
 register_operator_on_startup: true
 
 chain_urls:
-  mainnet: wss://holesky.gateway.tenderly.co/3Wiu0rFTyBrOesBPrQnxOw
+  ethmainnet: wss://holesky.gateway.tenderly.co/3Wiu0rFTyBrOesBPrQnxOw

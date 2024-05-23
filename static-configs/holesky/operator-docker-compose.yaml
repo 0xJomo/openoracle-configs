@@ -27,5 +27,5 @@ enable_node_api: true
 register_operator_on_startup: true
 
 chain_urls:
-  holesky: wss://holesky.gateway.tenderly.co/3Wiu0rFTyBrOesBPrQnxOw
+  eth: wss://holesky.gateway.tenderly.co/3Wiu0rFTyBrOesBPrQnxOw
   plumetest: wss://plume-testnet.rpc.caldera.xyz/infra-partner-ws
