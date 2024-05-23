@@ -54,6 +54,9 @@ holesky-register-operator-avs: ## registers operator with OpenOracle (Holesky)
 holesky-update-operator: ## updates operator stake with OpenOracle (Holesky)
 	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/holesky/update-operator.yml up
 
+holesky-update-operator-test: ## updates operator stake with OpenOracle (Holesky)
+	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/holesky-test/update-operator.yml up
+
 start-monitoring: ## start prometheus and grafana monitoring for operators
 	docker compose -f monitoring/start-monitoring.yml up -d
 
