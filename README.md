@@ -46,6 +46,8 @@ make generate-bls-key-mainnet
 BLS keys are located under ./keys/mainnet/bls_key.
 
 ### 2. Import or create ECDSA key
+This would be your operator's key used during registering with our AVS, and can be removed after registration.
+
 If you already have your ecdsa key pair, import it to the same location, or anywhere in the project.
 
 Alternatively, if you are starting your first operator, or do not want to reuse your existing operator, you can create a new ECDSA key pair with following command
@@ -64,6 +66,21 @@ make generate-ecdsa-key-mainnet
 
 Generated ECDSA keys are located under ./keys/mainnet/ecdsa_key.
 
+### 3. Import or create your ECDSA signer key
+This would be the key you use to sign the task responses.
+
+If you already generated a ecdsa signer key pair during a previous setup with OpenOracle, import it to the same location, or anywhere in the project.
+
+Alternatively, if you are setting up with OpenOracle the first time, we recommend you to generate a new ecdsa signer key pair specifically for OpenOracle operation.
+
+
+#### Holesky
+```
+make generate-signer-ecdsa-key
+```
+
+Generated ECDSA keys are located under ./keys/signer_ecdsa_key.
+
 ## Configure ENV
 Update file `operator-configs/[NETWORK]/.env` and fill in the ENV variables
 
@@ -77,20 +94,41 @@ Make sure this matches your ECDSA key.
 
 If you generated ecdsa key using the command above, find the address at `keys/ecdsa_key/keys/1.ecdsa.key.json` (for Holesky) or `keys/mainnet/ecdsa_key/keys/1.ecdsa.key.json` (for Mainnet), look for `address` field.
 
-### 2. BLS_PRIVATE_KEY_PATH
+### 2. OPERATOR_SIGNATURE_ADDRESS
+Make sure this matches your signer ECDSA key.
+
+If you generated ecdsa key using the command above, find the address at `keys/signer_ecdsa_key/keys/1.ecdsa.key.json` (for Holesky), look for `address` field.
+
+### 3. BLS_PRIVATE_KEY_PATH
 If you moved the generated bls key, edit and point it to the correct path
 
-### 3. OPERATOR_BLS_KEY_PASSWORD
+### 4. OPERATOR_BLS_KEY_PASSWORD
 Find it at `keys/bls_key/password.txt` (Holesky) or `keys/mainnet/bls_key/password.txt` (Mainnet)
 
-### 4. ECDSA_PRIVATE_KEY_PATH
+### 5. ECDSA_PRIVATE_KEY_PATH
 If you moved the generated ecdsa key, or importing your own ecdsa key, edit and point it to the correct path
 
-### 5. OPERATOR_ECDSA_KEY_PASSWORD
+### 6. OPERATOR_ECDSA_KEY_PASSWORD
 Find it at `keys/ecdsa_key/password.txt` (Holesky) or `keys/mainnet/ecdsa_key/password.txt` (Mainnet), or your own ecdsa key path. If you don't have password on the ecdsa key, leave it as empty string.
 
-### 6. HTTP_RPC_URL and WS_RPC_URL
-Put in your node RPC
+### 7. ECDSA_SIGNER_PRIVATE_KEY_PATH
+If you moved the generated signer ecdsa key, or importing your own ecdsa key, edit and point it to the correct path
+
+### 8. OPERATOR_SIGNER_ECDSA_KEY_PASSWORD
+Find it at `keys/signer_ecdsa_key/password.txt` (Holesky), or your own ecdsa key path. If you don't have password on the signer ecdsa key, leave it as empty string.
+
+### 9. HTTP_RPC_URL and WS_RPC_URL
+Put in your node RPC for Holesky / Mainnet
+
+## Configure Subscribe RPC Endpoints
+Update file `static-configs/[NETWORK]/operator-docker-compose.yaml` and fill in your own RPC endpoints
+
+### 0. Copy from Example file
+`cp static-configs/holesky/operator-docker-compose.yaml.example static-configs/holesky/operator-docker-compose.yaml`
+or
+`cp static-configs/mainnet/operator-docker-compose.yaml.example static-configs/mainnet/operator-docker-compose.yaml`
+
+### 1. Update `chain_urls` section and fill in your own
 
 ## Fund ECDSA Wallet
 
@@ -144,6 +182,11 @@ make holesky-start-operator-all
 or
 ```
 make mainnet-start-operator-all
+```
+
+### 4. (Troubleshoot) If you encounter error saying your bls key or ecdsa signer key does not match
+```
+make holesky-update-bls-key-and-signer
 ```
 
 ## Upgrade opeartor

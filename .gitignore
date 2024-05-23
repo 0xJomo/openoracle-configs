@@ -1,4 +1,6 @@
 keys/bls_key
 keys/ecdsa_key
+keys/signer_ecdsa_key
 keys/mainnet
+operator-docker-compose.yaml
 .env

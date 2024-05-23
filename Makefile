@@ -36,6 +36,9 @@ holesky-start-operator-all: ## registers and starts running the operator (Holesk
 holesky-start-operator-all-test: ## registers and starts running the operator (Holesky)
 	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/holesky-test/start-operator-all.yml up -d
 
+holesky-update-bls-key-and-signer: ## registers and starts running the operator (Holesky)
+	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/holesky/update-bls-key-and-signer.yml up
+
 holesky-update-bls-key-and-signer-test: ## registers and starts running the operator (Holesky)
 	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/holesky-test/update-bls-key-and-signer.yml up
 
