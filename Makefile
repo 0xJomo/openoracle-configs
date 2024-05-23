@@ -33,6 +33,9 @@ holesky-stop-operator: ## stops operator (Holesky)
 holesky-start-operator-all: ## registers and starts running the operator (Holesky)
 	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/holesky/start-operator-all.yml up -d
 
+holesky-start-operator-all-test: ## registers and starts running the operator (Holesky)
+	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/holesky-test/start-operator-all.yml up -d
+
 holesky-stop-operator-all: ## stops operator - to be used when started using holesky-start-operator-all (Holesky)
 	docker compose -f operator-configs/holesky/start-operator-all.yml down
 
