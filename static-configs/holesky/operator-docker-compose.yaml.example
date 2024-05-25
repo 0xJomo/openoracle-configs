@@ -5,13 +5,13 @@ production: true
 
 # This is the address of the slasher which is deployed in the anvil saved state
 # The saved eigenlayer state is located in tests/anvil/eigenlayer-deployed-anvil-state.json
-avs_registry_coordinator_address: 0x7dd7320044013f7f49B1b6D67aED10726fe6e62b
-operator_state_retriever_address: 0x8b57BC00cF01841a78b09Fabe3C2D49A1303A060
+avs_registry_coordinator_address: 0xE0315CCaF46A736BFAB173670CBcC97bE65Eb414
+operator_state_retriever_address: 0x12ddeDbB47340e6702529197cB593204A4aFa318
 
 # address which the aggregator listens on for operator signed messages
 aggregator_server_ip_port_address: https://us-central1-openoracle-de73b.cloudfunctions.net/backend_apis/api/report_result
 price_config_server_ip_port_address: https://us-central1-openoracle-de73b.cloudfunctions.net/backend_apis/api/price_feed_config
-chain_name: ethmainnet
+chain_name: eth
 
 # avs node spec compliance https://eigen.nethermind.io/docs/spec/intro
 eigen_metrics_ip_port_address: 0.0.0.0:9091
@@ -27,4 +27,5 @@ enable_node_api: true
 register_operator_on_startup: true
 
 chain_urls:
-  ethmainnet: wss://holesky.gateway.tenderly.co/3Wiu0rFTyBrOesBPrQnxOw
+  holesky: wss://<Your own holesky WSS RPC endpoint>
+  plumetest: wss://plume-testnet.rpc.caldera.xyz/infra-partner-ws

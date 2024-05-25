@@ -10,60 +10,56 @@ generate-bls-key: ## generates bls key
 generate-ecdsa-key: ## generates ecdsa key
 	./keys/egnkey-linux generate --key-type ecdsa --num-keys 1 --output-dir keys/ecdsa_key
 
+generate-signer-ecdsa-key: ## generates signer ecdsa key
+	./keys/egnkey-linux generate --key-type ecdsa --num-keys 1 --output-dir keys/signer_ecdsa_key
+
 generate-bls-key-arm: ## generates bls key on arm machines
 	./keys/egnkey generate --key-type bls --num-keys 1 --output-dir keys/bls_key
 
 generate-ecdsa-key-arm: ## generates ecdsa key on arm machines
 	./keys/egnkey generate --key-type ecdsa --num-keys 1 --output-dir keys/ecdsa_key
 
+generate-signer-ecdsa-key-arm: ## generates signer ecdsa key on arm machines
+	./keys/egnkey generate --key-type ecdsa --num-keys 1 --output-dir keys/signer_ecdsa_key
+
 # Holesky commands
 
 holesky-start-operator: ## starts running the operator (Holesky)
-	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/holesky/start-operator.yml up -d
+	docker pull gcr.io/openoracle-de73b/operator-holesky:latest && docker compose -f operator-configs/holesky/start-operator.yml up -d
 
 holesky-stop-operator: ## stops operator (Holesky)
 	docker compose -f operator-configs/holesky/start-operator.yml down
 
 holesky-start-operator-all: ## registers and starts running the operator (Holesky)
-	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/holesky/start-operator-all.yml up -d
+	docker pull gcr.io/openoracle-de73b/operator-holesky:latest && docker compose -f operator-configs/holesky/start-operator-all.yml up -d
+
+holesky-update-bls-key-and-signer: ## registers and starts running the operator (Holesky)
+	docker pull gcr.io/openoracle-de73b/operator-holesky:latest && docker compose -f operator-configs/holesky/update-bls-key-and-signer.yml up
 
 holesky-stop-operator-all: ## stops operator - to be used when started using holesky-start-operator-all (Holesky)
 	docker compose -f operator-configs/holesky/start-operator-all.yml down
 
 holesky-register-operator-el: ## registers operator with eigenlayer (Holesky)
-	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/holesky/register-operator-el.yml up
+	docker pull gcr.io/openoracle-de73b/operator-holesky:latest && docker compose -f operator-configs/holesky/register-operator-el.yml up
 
 holesky-register-operator-avs: ## registers operator with OpenOracle (Holesky)
-	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/holesky/register-operator-avs.yml up
+	docker pull gcr.io/openoracle-de73b/operator-holesky:latest && docker compose -f operator-configs/holesky/register-operator-avs.yml up
 
 holesky-update-operator: ## updates operator stake with OpenOracle (Holesky)
-	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/holesky/update-operator.yml up
+	docker pull gcr.io/openoracle-de73b/operator-holesky:latest && docker compose -f operator-configs/holesky/update-operator.yml up
 
 start-monitoring: ## start prometheus and grafana monitoring for operators
 	docker compose -f monitoring/start-monitoring.yml up -d
 
-# Plumetest commands
+# Test Holesky commands
+holesky-start-operator-all-test: ## registers and starts running the operator (Holesky)
+	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/holesky-test/start-operator-all.yml up -d
 
-plumetest-start-operator: ## starts running the operator (Plumetest)
-	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/plumetest/start-operator.yml up -d
+holesky-update-bls-key-and-signer-test: ## registers and starts running the operator (Holesky)
+	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/holesky-test/update-bls-key-and-signer.yml up
 
-plumetest-stop-operator: ## stops operator (Plumetest)
-	docker compose -f operator-configs/plumetest/start-operator.yml down
-
-plumetest-start-operator-all: ## registers and starts running the operator (Plumetest)
-	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/plumetest/start-operator-all.yml up -d
-
-plumetest-stop-operator-all: ## stops operator - to be used when started using plumetest-start-operator-all (Plumetest)
-	docker compose -f operator-configs/plumetest/start-operator-all.yml down
-
-plumetest-register-operator-el: ## registers operator with eigenlayer (Plumetest)
-	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/plumetest/register-operator-el.yml up
-
-plumetest-register-operator-avs: ## registers operator with OpenOracle (Plumetest)
-	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/plumetest/register-operator-avs.yml up
-
-plumetest-update-operator: ## updates operator stake with OpenOracle (Plumetest)
-	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/plumetest/update-operator.yml up
+holesky-update-operator-test: ## updates operator stake with OpenOracle (Holesky)
+	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/holesky-test/update-operator.yml up
 
 # Mainnet commands
 
@@ -73,11 +69,17 @@ generate-bls-key-mainnet: ## generates bls key (Mainnet)
 generate-ecdsa-key-mainnet: ## generates ecdsa key (Mainnet)
 	./keys/egnkey-linux generate --key-type ecdsa --num-keys 1 --output-dir keys/mainnet/ecdsa_key
 
+generate-signer-ecdsa-key-mainnet: ## generates signer ecdsa key (Mainnet)
+	./keys/egnkey-linux generate --key-type ecdsa --num-keys 1 --output-dir keys/mainnet/signer_ecdsa_key
+
 generate-bls-key-arm-mainnet: ## generates bls key on arm machines (Mainnet)
 	./keys/egnkey generate --key-type bls --num-keys 1 --output-dir keys/mainnet/bls_key
 
 generate-ecdsa-key-arm-mainnet: ## generates ecdsa key on arm machines (Mainnet)
 	./keys/egnkey generate --key-type ecdsa --num-keys 1 --output-dir keys/mainnet/ecdsa_key
+
+generate-signer-ecdsa-key-arm-mainnet: ## generates signer ecdsa key on arm machines (Mainnet)
+	./keys/egnkey generate --key-type ecdsa --num-keys 1 --output-dir keys/mainnet/signer_ecdsa_key
 
 mainnet-start-operator: ## starts running the operator (Mainnet)
 	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/mainnet/start-operator.yml up -d
