@@ -81,6 +81,13 @@ make generate-signer-ecdsa-key
 
 Generated ECDSA keys are located under ./keys/signer_ecdsa_key.
 
+#### Mainnet
+```
+make generate-signer-ecdsa-key-mainnet
+```
+
+Generated ECDSA keys are located under ./keys/mainnet/signer_ecdsa_key.
+
 ## Configure ENV
 Update file `operator-configs/[NETWORK]/.env` and fill in the ENV variables
 
@@ -187,6 +194,10 @@ make mainnet-start-operator-all
 ### 4. (Troubleshoot) If you encounter error saying your bls key or ecdsa signer key does not match
 ```
 make holesky-update-bls-key-and-signer
+```
+
+```
+make mainnet-update-bls-key-and-signer
 ```
 
 ## Upgrade opeartor
