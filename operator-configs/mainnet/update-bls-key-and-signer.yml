@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  operator:
+    image: gcr.io/openoracle-de73b/operator:latest
+    volumes:
+      - ../../:/open-oracle/
+    working_dir: /open-oracle
+    env_file:
+      - .env
+    command: --config ./static-configs/mainnet/operator-docker-compose.yaml update-operator-bls-key-and-signer
