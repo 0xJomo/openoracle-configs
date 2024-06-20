@@ -8,4 +8,4 @@ services:
     working_dir: /open-oracle
     env_file:
       - .env
-    command: --config ./static-configs/holesky/operator-docker-compose.yaml register-operator-with-avs
+    command: --config ./static-configs/holesky_test/operator-docker-compose.yaml register-operator-with-avs

@@ -55,6 +55,9 @@ start-monitoring: ## start prometheus and grafana monitoring for operators
 holesky-start-operator-all-test: ## registers and starts running the operator (Holesky)
 	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/holesky-test/start-operator-all.yml up -d
 
+holesky-start-operator-test: ## registers and starts running the operator (Holesky)
+	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/holesky-test/start-operator.yml up -d
+
 holesky-update-bls-key-and-signer-test: ## registers and starts running the operator (Holesky)
 	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/holesky-test/update-bls-key-and-signer.yml up
 
