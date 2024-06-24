@@ -28,4 +28,4 @@ health_ws_url: ws://localhost:3030/
 register_operator_on_startup: true
 
 chain_urls:
-  ethmainnet: wss://mainnet.infura.io/ws/v3/e2527b81fccf4dcf9f4c54e74cc64068
+  ethmainnet: wss://<Your own mainnet WSS RPC endpoint>

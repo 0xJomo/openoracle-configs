@@ -84,6 +84,9 @@ generate-ecdsa-key-arm-mainnet: ## generates ecdsa key on arm machines (Mainnet)
 generate-signer-ecdsa-key-arm-mainnet: ## generates signer ecdsa key on arm machines (Mainnet)
 	./keys/egnkey generate --key-type ecdsa --num-keys 1 --output-dir keys/mainnet/signer_ecdsa_key
 
+mainnet-update-bls-key-and-signer: ## registers and starts running the operator (Mainnet)
+	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/mainnet/update-bls-key-and-signer.yml up
+
 mainnet-start-operator: ## starts running the operator (Mainnet)
 	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/mainnet/start-operator.yml up -d
 
