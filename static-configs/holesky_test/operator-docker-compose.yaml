@@ -5,19 +5,19 @@ production: true
 
 # This is the address of the slasher which is deployed in the anvil saved state
 # The saved eigenlayer state is located in tests/anvil/eigenlayer-deployed-anvil-state.json
-avs_registry_coordinator_address: 0xE0315CCaF46A736BFAB173670CBcC97bE65Eb414
-operator_state_retriever_address: 0x12ddeDbB47340e6702529197cB593204A4aFa318
+avs_registry_coordinator_address: 0x5063C16f24626b8e906624f55406C0300Ff60e00
+operator_state_retriever_address: 0xef3400E6Fa08D7bF14e8bb4a6F966509FC9ecB85
 
 # address which the aggregator listens on for operator signed messages
-aggregator_server_ip_port_address: https://us-central1-openoracle-de73b.cloudfunctions.net/backend_apis_holesky/api/report_result
+aggregator_server_ip_port_address: https://us-central1-openoracle-de73b.cloudfunctions.net/backend_apis_test/api/report_result
 price_config_server_ip_port_address: https://us-central1-openoracle-de73b.cloudfunctions.net/backend_apis/api/price_feed_config
-chain_name: eth
+chain_name: holesky_test
 
 # avs node spec compliance https://eigen.nethermind.io/docs/spec/intro
 eigen_metrics_ip_port_address: 0.0.0.0:9091
-enable_metrics: true
+enable_metrics: false
 node_api_ip_port_address: 0.0.0.0:9010
-enable_node_api: true
+enable_node_api: false
 health_ws_url: ws://oracle.openlayer.tech:3030/
 
 # we need to register the operator on startup when running the docker compose file
@@ -28,5 +28,5 @@ health_ws_url: ws://oracle.openlayer.tech:3030/
 register_operator_on_startup: true
 
 chain_urls:
-  holesky: wss://holesky.gateway.tenderly.co/3Wiu0rFTyBrOesBPrQnxOw
-  plumetest: wss://plume-testnet.rpc.caldera.xyz/infra-partner-ws
+  holesky_test: wss://holesky.gateway.tenderly.co/3Wiu0rFTyBrOesBPrQnxOw
+  plumetest_test: wss://plume-testnet.rpc.caldera.xyz/infra-partner-ws
