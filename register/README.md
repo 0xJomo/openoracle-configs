@@ -61,7 +61,17 @@
    3. **Sign the Message:** You need to use the operator's private key to sign the `msg` field and add the signature to the message.
 
   ### 2. Generate Registration Transaction for Signing
-
+    Please ensure the `bls` file exists in the same directory as the executable file, with the following directory structure for `bls`:
+    
+    ```
+    ├── bls
+    │   ├── keys
+    │   │   └── 1.bls.key.json
+    │   └── password.txt
+    ├── openlayer_reg-linux
+    ├── openlayer_reg-macos
+    └── openlayer_reg-win.exe
+    ```
    1. **Enter Operator Address:** You will be prompted to enter the Ethereum address of the operator.
    2. **Enter Operator Singer Address:** You will be prompted to enter the Ethereum address of the operator signer.
    3. **Enter Signed Message:** A text editor will open. Paste the signed message (including `salt`, `expiry`, and `signature`) into the editor. The message should be in valid JSON format, for example:
