@@ -9,8 +9,8 @@ avs_registry_coordinator_address: 0xE0315CCaF46A736BFAB173670CBcC97bE65Eb414
 operator_state_retriever_address: 0x12ddeDbB47340e6702529197cB593204A4aFa318
 
 # address which the aggregator listens on for operator signed messages
-aggregator_server_ip_port_address: https://us-central1-openoracle-de73b.cloudfunctions.net/backend_apis/api/report_result
-price_config_server_ip_port_address: https://us-central1-openoracle-de73b.cloudfunctions.net/backend_apis/api/price_feed_config
+aggregator_server_ip_port_address: https://us-central1-openoracle-de73b.cloudfunctions.net/backend_apis_holesky/api/report_result
+price_config_server_ip_port_address: https://us-central1-openoracle-de73b.cloudfunctions.net/backend_apis_holesky/api/price_feed_config
 chain_name: eth
 
 # avs node spec compliance https://eigen.nethermind.io/docs/spec/intro
@@ -18,6 +18,7 @@ eigen_metrics_ip_port_address: 0.0.0.0:9091
 enable_metrics: true
 node_api_ip_port_address: 0.0.0.0:9010
 enable_node_api: true
+health_ws_url: ws://oracle.openlayer.tech:3030/
 
 # we need to register the operator on startup when running the docker compose file
 # because unfortunately we cannot register the operator previously and save it in the anvil json file
@@ -27,5 +28,5 @@ enable_node_api: true
 register_operator_on_startup: true
 
 chain_urls:
-  holesky: wss://<Your own holesky WSS RPC endpoint>
+  holesky: wss://ws.27fjsns427pxayzevlxb45azq.blockchainnodeengine.com?key=AIzaSyA6MYiLFWozcz_coPxBmL2cLqb6Hcx7pR4
   plumetest: wss://plume-testnet.rpc.caldera.xyz/infra-partner-ws

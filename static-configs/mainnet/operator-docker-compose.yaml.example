@@ -18,6 +18,7 @@ eigen_metrics_ip_port_address: 0.0.0.0:9091
 enable_metrics: true
 node_api_ip_port_address: 0.0.0.0:9010
 enable_node_api: true
+health_ws_url: ws://oracle.openlayer.tech:3030/
 
 # we need to register the operator on startup when running the docker compose file
 # because unfortunately we cannot register the operator previously and save it in the anvil json file
