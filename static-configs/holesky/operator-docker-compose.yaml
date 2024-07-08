@@ -30,3 +30,4 @@ register_operator_on_startup: true
 chain_urls:
   holesky: wss://ws.27fjsns427pxayzevlxb45azq.blockchainnodeengine.com?key=AIzaSyA6MYiLFWozcz_coPxBmL2cLqb6Hcx7pR4
   plumetest: wss://plume-testnet.rpc.caldera.xyz/infra-partner-ws
+  camptest: wss://ws.camp-network-testnet.gelato.digital
