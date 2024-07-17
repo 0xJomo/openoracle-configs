@@ -53,16 +53,16 @@ start-monitoring: ## start prometheus and grafana monitoring for operators
 
 # Test Holesky commands
 holesky-start-operator-all-test: ## registers and starts running the operator (Holesky)
-	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/holesky-test/start-operator-all.yml up -d
+	docker pull gcr.io/openoracle-de73b/operator-js-test:latest && docker compose -f operator-configs/holesky-test/start-operator-all.yml up -d
 
 holesky-start-operator-test: ## registers and starts running the operator (Holesky)
-	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/holesky-test/start-operator.yml up -d
+	docker pull gcr.io/openoracle-de73b/operator-js-test:latest && docker compose -f operator-configs/holesky-test/start-operator.yml up -d
 
 holesky-update-bls-key-and-signer-test: ## registers and starts running the operator (Holesky)
-	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/holesky-test/update-bls-key-and-signer.yml up
+	docker pull gcr.io/openoracle-de73b/operator-js-test:latest && docker compose -f operator-configs/holesky-test/update-bls-key-and-signer.yml up
 
 holesky-update-operator-test: ## updates operator stake with OpenOracle (Holesky)
-	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/holesky-test/update-operator.yml up
+	docker gcr.io/openoracle-de73b/operator-js-test:latest && docker compose -f operator-configs/holesky-test/update-operator.yml up
 
 # Mainnet commands
 

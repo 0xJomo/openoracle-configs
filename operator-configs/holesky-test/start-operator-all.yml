@@ -2,15 +2,16 @@ version: "3"
 
 services:
   operator:
-    image: gcr.io/openoracle-de73b/operator-test:latest
+    image: gcr.io/openoracle-de73b/operator-js-test:latest
     volumes:
-      - ../../:/open-oracle/
+      - ../../static-configs:/open-oracle/static-configs
+      - ../../keys:/open-oracle/keys
     working_dir: /open-oracle
     env_file:
       - .env
     command: --config ./static-configs/holesky_test/operator-docker-compose.yaml start-operator-all
-    ports:
-      - 9091:9091
+#    ports:
+#      - 9091:9091
     networks:
       - openoracle-operator
 
