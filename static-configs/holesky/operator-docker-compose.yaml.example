@@ -5,8 +5,8 @@ production: true
 
 # This is the address of the slasher which is deployed in the anvil saved state
 # The saved eigenlayer state is located in tests/anvil/eigenlayer-deployed-anvil-state.json
-avs_registry_coordinator_address: 0xE0315CCaF46A736BFAB173670CBcC97bE65Eb414
-operator_state_retriever_address: 0x12ddeDbB47340e6702529197cB593204A4aFa318
+avs_registry_coordinator_address: "0xE0315CCaF46A736BFAB173670CBcC97bE65Eb414"
+operator_state_retriever_address: "0x12ddeDbB47340e6702529197cB593204A4aFa318"
 
 # address which the aggregator listens on for operator signed messages
 aggregator_server_ip_port_address: https://us-central1-openoracle-de73b.cloudfunctions.net/backend_apis_holesky/api/report_result
