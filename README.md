@@ -102,7 +102,7 @@ Make sure this starts with "0x" and matches your ECDSA key.
 If you generated ecdsa key using the command above, find the address at `keys/ecdsa_key/keys/1.ecdsa.key.json` (for Holesky) or `keys/mainnet/ecdsa_key/keys/1.ecdsa.key.json` (for Mainnet), look for `address` field.
 
 ### 2. OPERATOR_SIGNATURE_ADDRESS
-Make sure this matches your signer ECDSA key.
+Make sure this starts with "0x" and matches your signer ECDSA key.
 
 If you generated ecdsa key using the command above, find the address at `keys/signer_ecdsa_key/keys/1.ecdsa.key.json` (for Holesky), look for `address` field.
 
