@@ -97,7 +97,7 @@ or
 `cp operator-configs/mainnet/.env.example operator-configs/mainnet/.env`
 
 ### 1. OPERATOR_ADDRESS
-Make sure this matches your ECDSA key.
+Make sure this starts with "0x" and matches your ECDSA key.
 
 If you generated ecdsa key using the command above, find the address at `keys/ecdsa_key/keys/1.ecdsa.key.json` (for Holesky) or `keys/mainnet/ecdsa_key/keys/1.ecdsa.key.json` (for Mainnet), look for `address` field.
 
