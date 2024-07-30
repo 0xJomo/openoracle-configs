@@ -3,6 +3,7 @@ version: "3"
 services:
   operator:
     image: gcr.io/openoracle-de73b/operator:latest
+    restart: always
     volumes:
       - ../../:/open-oracle/
     working_dir: /open-oracle
