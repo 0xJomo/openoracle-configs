@@ -10,7 +10,7 @@ operator_state_retriever_address: 0x12ddeDbB47340e6702529197cB593204A4aFa318
 
 # address which the aggregator listens on for operator signed messages
 aggregator_server_ip_port_address: https://us-central1-openoracle-de73b.cloudfunctions.net/backend_apis_holesky/api/report_result
-price_config_server_ip_port_address: https://us-central1-openoracle-de73b.cloudfunctions.net/backend_apis/api/price_feed_config
+price_config_server_ip_port_address: https://us-central1-openoracle-de73b.cloudfunctions.net/backend_apis_holesky/api/price_feed_config
 chain_name: eth
 
 # avs node spec compliance https://eigen.nethermind.io/docs/spec/intro
