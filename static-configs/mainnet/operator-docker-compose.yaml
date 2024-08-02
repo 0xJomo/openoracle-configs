@@ -28,4 +28,5 @@ health_ws_url: ws://34.171.190.38:3033/
 register_operator_on_startup: true
 
 chain_urls:
-  ethmainnet: wss://<Your own mainnet WSS RPC endpoint>
+  ethmainnet: wss://eth-mainnet.g.alchemy.com/v2/FdXRCnA7JkMctPPNz13X5ATSbeSOSvwP
+  base: wss://base-mainnet.g.alchemy.com/v2/FdXRCnA7JkMctPPNz13X5ATSbeSOSvwP
