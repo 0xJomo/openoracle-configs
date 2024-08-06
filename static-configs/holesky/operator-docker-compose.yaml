@@ -30,3 +30,5 @@ register_operator_on_startup: true
 chain_urls:
   holesky: wss://holesky.gateway.tenderly.co/3Wiu0rFTyBrOesBPrQnxOw
   plumetest: wss://plume-testnet.rpc.caldera.xyz/infra-partner-ws
+  camptest: wss://ws.camp-network-testnet.gelato.digital
+  basetest: wss://base-sepolia-rpc.publicnode.com
