@@ -2,9 +2,10 @@ version: "3"
 
 services:
   operator:
-    image: gcr.io/openoracle-de73b/operator-holesky:latest
+    image: gcr.io/openoracle-de73b/operator-js-holesky:latest
     volumes:
-      - ../../:/open-oracle/
+      - ../../static-configs:/open-oracle/static-configs
+      - ../../keys:/open-oracle/keys
     working_dir: /open-oracle
     env_file:
       - .env

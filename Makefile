@@ -25,44 +25,44 @@ generate-signer-ecdsa-key-arm: ## generates signer ecdsa key on arm machines
 # Holesky commands
 
 holesky-start-operator: ## starts running the operator (Holesky)
-	docker pull gcr.io/openoracle-de73b/operator-holesky:latest && docker compose -f operator-configs/holesky/start-operator.yml up -d
+	docker pull gcr.io/openoracle-de73b/operator-js-holesky:latest && docker compose -f operator-configs/holesky/start-operator.yml up -d
 
 holesky-stop-operator: ## stops operator (Holesky)
 	docker compose -f operator-configs/holesky/start-operator.yml down
 
 holesky-start-operator-all: ## registers and starts running the operator (Holesky)
-	docker pull gcr.io/openoracle-de73b/operator-holesky:latest && docker compose -f operator-configs/holesky/start-operator-all.yml up -d
+	docker pull gcr.io/openoracle-de73b/operator-js-holesky:latest && docker compose -f operator-configs/holesky/start-operator-all.yml up -d
 
 holesky-update-bls-key-and-signer: ## registers and starts running the operator (Holesky)
-	docker pull gcr.io/openoracle-de73b/operator-holesky:latest && docker compose -f operator-configs/holesky/update-bls-key-and-signer.yml up
+	docker pull gcr.io/openoracle-de73b/operator-js-holesky:latest && docker compose -f operator-configs/holesky/update-bls-key-and-signer.yml up
 
 holesky-stop-operator-all: ## stops operator - to be used when started using holesky-start-operator-all (Holesky)
 	docker compose -f operator-configs/holesky/start-operator-all.yml down
 
 holesky-register-operator-el: ## registers operator with eigenlayer (Holesky)
-	docker pull gcr.io/openoracle-de73b/operator-holesky:latest && docker compose -f operator-configs/holesky/register-operator-el.yml up
+	docker pull gcr.io/openoracle-de73b/operator-js-holesky:latest && docker compose -f operator-configs/holesky/register-operator-el.yml up
 
 holesky-register-operator-avs: ## registers operator with OpenOracle (Holesky)
-	docker pull gcr.io/openoracle-de73b/operator-holesky:latest && docker compose -f operator-configs/holesky/register-operator-avs.yml up
+	docker pull gcr.io/openoracle-de73b/operator-js-holesky:latest && docker compose -f operator-configs/holesky/register-operator-avs.yml up
 
 holesky-update-operator: ## updates operator stake with OpenOracle (Holesky)
-	docker pull gcr.io/openoracle-de73b/operator-holesky:latest && docker compose -f operator-configs/holesky/update-operator.yml up
+	docker pull gcr.io/openoracle-de73b/operator-js-holesky:latest && docker compose -f operator-configs/holesky/update-operator.yml up
 
 start-monitoring: ## start prometheus and grafana monitoring for operators
 	docker compose -f monitoring/start-monitoring.yml up -d
 
 # Test Holesky commands
 holesky-start-operator-all-test: ## registers and starts running the operator (Holesky)
-	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/holesky-test/start-operator-all.yml up -d
+	docker pull gcr.io/openoracle-de73b/operator-js-test:latest && docker compose -f operator-configs/holesky-test/start-operator-all.yml up -d
 
 holesky-start-operator-test: ## registers and starts running the operator (Holesky)
-	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/holesky-test/start-operator.yml up -d
+	docker pull gcr.io/openoracle-de73b/operator-js-test:latest && docker compose -f operator-configs/holesky-test/start-operator.yml up -d
 
 holesky-update-bls-key-and-signer-test: ## registers and starts running the operator (Holesky)
-	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/holesky-test/update-bls-key-and-signer.yml up
+	docker pull gcr.io/openoracle-de73b/operator-js-test:latest && docker compose -f operator-configs/holesky-test/update-bls-key-and-signer.yml up
 
 holesky-update-operator-test: ## updates operator stake with OpenOracle (Holesky)
-	docker pull gcr.io/openoracle-de73b/operator-test:latest && docker compose -f operator-configs/holesky-test/update-operator.yml up
+	docker gcr.io/openoracle-de73b/operator-js-test:latest && docker compose -f operator-configs/holesky-test/update-operator.yml up
 
 # Mainnet commands
 
@@ -85,25 +85,25 @@ generate-signer-ecdsa-key-arm-mainnet: ## generates signer ecdsa key on arm mach
 	./keys/egnkey generate --key-type ecdsa --num-keys 1 --output-dir keys/mainnet/signer_ecdsa_key
 
 mainnet-update-bls-key-and-signer: ## registers and starts running the operator (Mainnet)
-	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/mainnet/update-bls-key-and-signer.yml up
+	docker pull gcr.io/openoracle-de73b/operator-js:latest && docker compose -f operator-configs/mainnet/update-bls-key-and-signer.yml up
 
 mainnet-start-operator: ## starts running the operator (Mainnet)
-	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/mainnet/start-operator.yml up -d
+	docker pull gcr.io/openoracle-de73b/operator-js:latest && docker compose -f operator-configs/mainnet/start-operator.yml up -d
 
 mainnet-stop-operator: ## stops operator (Mainnet)
 	docker compose -f operator-configs/mainnet/start-operator.yml down
 
 mainnet-start-operator-all: ## registers and starts running the operator (Mainnet)
-	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/mainnet/start-operator-all.yml up -d
+	docker pull gcr.io/openoracle-de73b/operator-js:latest && docker compose -f operator-configs/mainnet/start-operator-all.yml up -d
 
 mainnet-stop-operator-all: ## stops operator - to be used when started using mainnet-start-operator-all (Mainnet)
 	docker compose -f operator-configs/mainnet/start-operator-all.yml down
 
 mainnet-register-operator-el: ## registers operator with eigenlayer (Mainnet)
-	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/mainnet/register-operator-el.yml up
+	docker pull gcr.io/openoracle-de73b/operator-js:latest && docker compose -f operator-configs/mainnet/register-operator-el.yml up
 
 mainnet-register-operator-avs: ## registers operator with OpenOracle (Mainnet)
-	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/mainnet/register-operator-avs.yml up
+	docker pull gcr.io/openoracle-de73b/operator-js:latest && docker compose -f operator-configs/mainnet/register-operator-avs.yml up
 
 mainnet-update-operator: ## updates operator stake with OpenOracle (Mainnet)
-	docker pull gcr.io/openoracle-de73b/operator:latest && docker compose -f operator-configs/mainnet/update-operator.yml up
+	docker pull gcr.io/openoracle-de73b/operator-js:latest && docker compose -f operator-configs/mainnet/update-operator.yml up
