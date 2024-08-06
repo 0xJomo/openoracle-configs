@@ -28,7 +28,8 @@ health_ws_url: ws://oracle.openlayer.tech:3030/
 register_operator_on_startup: true
 
 chain_urls:
-  holesky: wss://holesky.gateway.tenderly.co/3Wiu0rFTyBrOesBPrQnxOw
+  holesky: wss://ws.27fjsns427pxayzevlxb45azq.blockchainnodeengine.com?key=AIzaSyA6MYiLFWozcz_coPxBmL2cLqb6Hcx7pR4
+  base: wss://base-rpc.publicnode.com
   plumetest: wss://plume-testnet.rpc.caldera.xyz/infra-partner-ws
   camptest: wss://ws.camp-network-testnet.gelato.digital
   basetest: wss://base-sepolia-rpc.publicnode.com
